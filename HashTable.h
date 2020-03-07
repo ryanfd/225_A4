@@ -1,5 +1,7 @@
 #pragma once
 
+#include<string>
+
 using std::string;
 
 class HashTable 
@@ -7,7 +9,7 @@ class HashTable
 public:
 	// constructors, destructors, operator
 	HashTable();
-	HashTable(int n);
+	HashTable(int);
 	HashTable(const HashTable &);
 	~HashTable();
 	HashTable& operator=(const HashTable &);
@@ -21,9 +23,17 @@ public:
 	int maxSize() const;
 	int loadFactor() const;
 
+	// DELETE LATER
+	void print();
+
 private:
 	string* arr;
-	int size;
+	int capacity;
 	int h2;
 	int currentNumItems;
+
+	// helpers
+	bool isPrimte(int); // check if number is prime
+	int findPrime(int); // find closest prime equal to or greater than
+
 };
