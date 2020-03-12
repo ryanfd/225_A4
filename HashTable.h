@@ -12,16 +12,16 @@ public:
 	HashTable(int);
 	HashTable(const HashTable &);
 	~HashTable();
-	HashTable& operator=(const HashTable &);
+	HashTable & operator=(const HashTable &);
 
 	// mutators
 	void insert(const string &);
 
 	// accessors
-	bool find(const string &) const;
+	bool find(const string &);
 	int size() const;
 	int maxSize() const;
-	int loadFactor() const;
+	float loadFactor() const;
 
 	// DELETE LATER
 	void print();
@@ -33,7 +33,10 @@ private:
 	int currentNumItems;
 
 	// helpers
-	bool isPrimte(int); // check if number is prime
+	bool isPrime(int); // check if number is prime
 	int findPrime(int); // find closest prime equal to or greater than
-
+	int horner(const string &); // get unique numerical value of string
+	int hashFunction(const string &); // hash function
+	void copyTable(const HashTable &); // deep copy function
+	int hashFunction2(const string &); // double hash function
 };
