@@ -58,6 +58,7 @@ HashTable & HashTable::operator=(const HashTable & h)
 
 void HashTable::insert(const string & s)
 {
+	// cout << "here";
 	// search hashtable
 	int h1 = hashFunction(s);
 	while (arr[h1] != "") {
@@ -67,7 +68,7 @@ void HashTable::insert(const string & s)
 	if (!find(s)) arr[h1] = s; // place in array when space is found
 
 	// increase table size if 2/3 full and copy
-	if (currentNumItems / capacity > 0.67) {
+	if (loadFactor() > 0.67) {
 		capacity = findPrime(capacity*2);
 		string *temp = arr;
 		delete[] arr;

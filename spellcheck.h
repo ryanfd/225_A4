@@ -2,9 +2,16 @@
 
 #include <string>
 #include <vector>
+#include <fstream>
+#include <iterator>
+
+#include "HashTable.h"
 
 using std::string;
 using std::vector;
+using std::ifstream;
+using std::runtime_error;
+using std::istream_iterator;
 
 // Opens a file and reads the contents into a vector
 // PARAM: infile = name of the file to be opened
@@ -26,6 +33,12 @@ vector<string> readFile(string infile)
 vector<string> extraLetter(const HashTable & ht, string word)
 {
 	vector<string> result;
+
+	// if (!ht.find(word)) {
+	// 	// vector<string> wordList = readFile(wordList1000.txt);
+	// } else {
+	// 	result.push_back(word);
+	// }
 
 	return result;
 }
