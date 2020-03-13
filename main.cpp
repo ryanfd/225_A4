@@ -3,9 +3,11 @@
 
 #include <iostream>
 #include <random>
+#include <vector>
 
 using std::cout;	
 using std::endl; 
+using std::vector;
 
 void initTest();
 void testInsert();
@@ -32,7 +34,7 @@ void initTest()
 
 void testInsert()
 {
-	HashTable h(100);
+	HashTable h;
 	// h.insert("cat");
 	// h.insert("cat");
 	// h.insert("dog");
@@ -46,7 +48,7 @@ void testInsert()
 	// h.insert("cater");
 
 	vector<string> list = readFile("wordList1000.txt");
-	for (int i=0; i<80; i++) {
+	for (int i=0; i<90; i++) {
 		int index = rand() % list.size();
 		h.insert(list[index]);
 	}

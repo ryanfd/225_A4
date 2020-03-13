@@ -58,7 +58,6 @@ HashTable & HashTable::operator=(const HashTable & h)
 
 void HashTable::insert(const string & s)
 {
-	// cout << "here";
 	// search hashtable
 	int h1 = hashFunction(s);
 	while (arr[h1] != "") {
