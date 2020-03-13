@@ -22,6 +22,7 @@ vector<string> readFile(string infile)
 	return result;
 }
 
+// one letter difference
 vector<string> extraLetter(const HashTable & ht, string word)
 {
 	vector<string> result;
