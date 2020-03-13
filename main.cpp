@@ -37,8 +37,5 @@ void testInsert()
 	h.insert("apple");
 	h.insert("apple");
 
-	for (int i=0; i<h.maxSize(); i++) {
-		h.insert("a" + i);
-	}
 	h.print();
 }
